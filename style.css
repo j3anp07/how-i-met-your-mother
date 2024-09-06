@@ -1,0 +1,281 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo básico do body e html */
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #bebebe, #c0c3cc, #7b7b7e, #c5c8ca);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Estilo do body */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Centralização do conteúdo principal */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Classe que será adicionada ao main quando resultados são exibidos */
+main.has-results {
+    transform: translateY(-200px);
+    opacity: 0.5;
+}
+
+/* Estilo do título */
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    color: #000000;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(40, end) forwards;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Estilo da classe .container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pesquisar {
+    display: flex;
+    gap: 20px;
+}
+
+.input1 {
+    width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input1:focus {
+    outline: none;
+    border-color: #2b3035;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.input1:active {
+    background-color: #f0f0f0;
+    transform: scale(0.95);
+}
+
+button {
+    padding: 5px 15px;
+    border: none;
+    border-radius: 15px;
+    color: #212121;
+    background: #e8e8e8;
+    font-weight: 1000;
+    font-size: 17px;
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    cursor: pointer;
+    position: relative;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    transition: all 250ms;
+    z-index: -1;
+}
+
+button:hover {
+    color: #999999;
+}
+
+button:hover::before {
+    width: 100%;
+}
+
+/* Estilo do rodapé */
+footer {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    font-weight: 900;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    color: #fff;
+}
+
+/* Estilo das redes sociais */
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    font-size: 28px;
+}
+
+.social a {
+    color: #000000;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.social a:hover {
+    color: #000000;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+/* Estiliza a caixa de resultados da pesquisa */
+.resultados-pesquisa {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    display: none;
+   
+}
+
+/* Exibe a caixa de resultados quando há resultados */
+.resultados-pesquisa.show {
+    display: block;
+}
+
+.item-resultado {
+    background: #FFFFFF;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item-resultado h2 {
+    font-size: 1.5rem;
+    color: #222831;
+}
+
+.item-resultado a {
+    text-decoration: none;
+    color: #30475E;
+}
+
+.item-resultado a:hover {
+    text-decoration: underline;
+}
+
+.descricao-meta {
+    color: #45474B;
+    margin: 0.5rem 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Media Queries para ajustes específicos */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .pesquisar {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+.item-resultado img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 0.6rem;
+}
+
+@media (min-width: 768px) {
+    .resultados-pesquisa {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+}
+
+.item-resultado:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.item-resultado h2:hover {
+    color: #333;
+}
+
+/* Estilo básico do erro */
+.error-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background-color: #f1eded;
+    color: #000000;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.error-message i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+/* Estilo do ícone de erro específico */
+.error-message .fa-exclamation-circle,
+.error-message .fa-times-circle {
+    color: #000000;
+}
