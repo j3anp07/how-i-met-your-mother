@@ -1,13 +1,13 @@
-A Lenda Continua: Uma Exploração Interativa de HIMYM
+##**A Lenda Continua: Uma Exploração Interativa de HIMYM**
 O que é isso?
 
 Prepare-se para uma aventura épica! Essa aplicação te leva direto para o MacLaren's Pub para desvendar todos os segredos dos seus personagens favoritos de How I Met Your Mother. Quer saber mais sobre o Barney Stinson, a Robin Scherbatsky ou o Ted Mosby? Aqui você encontra tudo!
 
-Como funciona?
+**Como funciona?**
 
 É simples como um high-five! Basta digitar o nome do personagem que você quer saber mais e pronto! A aplicação te mostra todas as informações disponíveis, desde a descrição até fotos incríveis.
 
-Tecnologias usadas:
+**Tecnologias usadas:**
 
 HTML: A base de tudo, a estrutura que dá forma ao nosso projeto.
 CSS: O estilista pessoal da nossa aplicação, responsável por deixar tudo bonito e organizado.
@@ -22,7 +22,7 @@ Contribuições:
 
 Quer ajudar a tornar esse projeto ainda mais incrível? Sinta-se à vontade para contribuir! Seja corrigindo bugs, adicionando novos recursos ou simplesmente deixando um comentário legal.
 
-Aviso Legal:
+**Aviso Legal:**
 
 Este projeto é apenas para fins de diversão e aprendizado. Todas as imagens e informações são de propriedade de seus respectivos donos.
 
