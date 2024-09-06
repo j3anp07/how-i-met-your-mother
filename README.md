@@ -1,4 +1,4 @@
-##**A Lenda Continua: Uma Exploração Interativa de HIMYM**
+**A Lenda Continua: Uma Exploração Interativa de HIMYM**
 O que é isso?
 
 Prepare-se para uma aventura épica! Essa aplicação te leva direto para o MacLaren's Pub para desvendar todos os segredos dos seus personagens favoritos de How I Met Your Mother. Quer saber mais sobre o Barney Stinson, a Robin Scherbatsky ou o Ted Mosby? Aqui você encontra tudo!
